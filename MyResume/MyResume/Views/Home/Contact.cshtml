@@ -1,0 +1,38 @@
+﻿@model MyResume.Views.Home.Contact
+@{
+    ViewData["Title"] = "Contact Me";
+}
+<h2>@ViewData["Title"]</h2>
+
+        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-black"></i>Software Engineer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-black"></i>Detroit, MI</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-black"></i>richqualitydevelopment@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-black"></i>1-313-320-6262</p>
+<p>
+    Please feel free to send me a message directly if you would like me to follow-up. Please provide Name, number email and a brief description below.
+</p>
+<form method="POST" action="" onsubmit="showResponse()">
+    <div class="col-sm-4 form-group">
+        <input class="form-control " type="text" name="name" placeholder="Name" value="" /><br>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="col-sm-4 form-group">
+        <input class="form-control" type="text" name="phone" placeholder="Phone" value="" /><br>
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="col-sm-4 form-group">
+        <input class="form-control" type="text" name="emailAddress"placeholder="Email" value="" /><br>
+        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+    </div>
+
+    <textarea class="form-control" id="comments" name="messages" placeholder="Message" rows="5"></textarea><br>
+
+    <div class="row">
+        <div class="col-sm-12 form-group">
+            <button class="btn btn-primary" onclick="SendingEmailOnClick"  type="submit">Send</button>
+        </div>
+    </div>
+
+</form>
+    <script src="site.js"></script>
