@@ -1,0 +1,48 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.RazorPages
+
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.ContactMessage</h3>
+
+
+<form method="POST" action="" onsubmit="showResponse()">
+    <div class="col-sm-4 form-group">
+        <input class="form-control " type="text" name="name" placeholder="Name" value="" /><br>
+    </div>
+
+    <div class="col-sm-4 form-group">
+        <input class="form-control" type="text" name="phone" placeholder="Phone" value="" /><br>
+    </div>
+    <div class="col-sm-4 form-group">
+        <input class="form-control" type="text" name="emailAddress"placeholder="Email" value="" /><br>
+    </div>
+
+    <textarea class="form-control" id="comments" name="messages" placeholder="Talk to us" rows="5"></textarea><br>
+    <div class="row">
+        <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" onclick="SendingEmailOnClick"  type="submit">Send</button>
+        </div>
+    </div>
+
+</form>
+<p>
+    Location
+    <address>
+        <span class="glyphicon glyphicon-map-marker">
+            5440 Cass Ave # 101,Detroit, MI 48202
+        </span>
+        <br />
+
+            <span class="glyphicon glyphicon-phone">
+                313-832-5583 </span>
+    </address>
+
+    <address>
+        <a href="https://www.google.com/search?q=belcrest+apartments&oq=belcrest+aparmt&aqs=chrome.1.69i57j0l5.5359j0j7&sourceid=chrome&ie=UTF-8">Click Here To Find Us!</a><br />
+    </address>
+
+    <script src="site.js"></script>
